@@ -11,13 +11,13 @@ import java.util.Date;
  *
  * @author 1795891
  */
-public class Student extends Personne {
+public class Student extends Person {
     String studentID;
     
     public Student(String nom, String prenom, Date dateNaissance){
-    this.lastName=nom;
-    this.firtName=prenom;
-    this.dateBirth=dateNaissance;
+    this.setFirtName(prenom);
+    this.setLastName(nom);
+    this.setDateBirth(dateNaissance);
     this.studentID=createStudentId(nom,prenom,dateNaissance);
     }
 
