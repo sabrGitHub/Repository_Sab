@@ -9,9 +9,7 @@ package refactoringExemple;
  *
  * @author 1795891
  */
-public class Lab {
-    String idClass;
-    Integer capacity;
+public class Lab extends ClassRoom {
     Integer nbComputers;
 
     public String getIdClass() {
