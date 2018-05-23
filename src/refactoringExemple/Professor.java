@@ -12,16 +12,19 @@ import java.util.List;
  *
  * @author 1795891
  */
-public class Professor  extends Personne{
+public class Professor  extends Person{
     List<Student> students=new ArrayList<Student>();
     String photoUrl;
     public Professor(String lastName,String firstName){
-            String employeeID=lastName.toUpperCase().trim().substring(1,3)
-                    +firstName.toUpperCase().trim().substring(1,3);
+            String employeeID=formateEmployeeID(lastName, firstName);
             System.out.println("New Professor: "+employeeID);
     }
-     public void setPhotoUrl(String photoName){
-     this.photoUrl="/photos/professors/mad/"+photoName;
+
+    private String formateEmployeeID(String lastName1, String firstName) {
+        return lastName1.toUpperCase().trim().substring(1, 3) + firstName.toUpperCase().trim().substring(1,3);//trim()enlever les espace 
+    }
+     public void setPhotoUrl(String photoName, String photoPath){
+     this.photoUrl=photoPath+photoName;
      }
 
     public void isSupervisedBy(Student student) {
